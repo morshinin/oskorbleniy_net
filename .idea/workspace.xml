@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ca3c8a91-5929-4f44-ac35-e2a46a26958d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1niAMVLEwJKOcuD257OmkFzyas2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca3c8a91-5929-4f44-ac35-e2a46a26958d" name="Default Changelist" comment="" />
+      <created>1611862492783</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611862492783</updated>
+      <workItem from="1611862495058" duration="2411000" />
+      <workItem from="1611912574334" duration="611000" />
+      <workItem from="1611925625777" duration="8212000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="231" key="#SQL_Dialects" timestamp="1611943746810">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="0" y="231" key="#SQL_Dialects/0.0.1280.800@0.0.1280.800" timestamp="1611943746810" />
+    <state x="240" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611943792335">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1611943792335" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1611963799272">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1611963799272" />
+    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup" timestamp="1611960711966">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1611960711966" />
+    <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1611862987959" />
+  </component>
+</project>
