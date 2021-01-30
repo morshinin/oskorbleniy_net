@@ -3,7 +3,7 @@ $request_uri = $_SERVER['REQUEST_URI'];
 $pages = [
     'О сайте' => '/about.php',
     'Списком'  =>  '/',
-    'Случайное' =>  'random.php'
+    'Случайное' =>  '/random.php'
 ];
 ?>
 <!doctype html>
@@ -13,12 +13,13 @@ $pages = [
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>INSULT.SPACE - Оскорбляза</title>
 </head>
 <body class="flex flex-col min-h-screen">
 <div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid">
-    <h2><a href="/">INSULT.SPACE - Оскорбляза</a></h2>
+    <h2 class="logo flex align-center"><a href="/">INSULT.SPACE - Оскорбляза</a></h2>
     <nav>
         <?php foreach ($pages as $page => $page_url) {
             if ($request_uri !== $page_url) { ?>
