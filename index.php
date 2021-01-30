@@ -9,16 +9,15 @@ $posts = $stmt->fetchAll();
 ?>
 
 <?php
-//    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    foreach($posts as $post) {
 ?>
 
     <div class="p-4 my-4 shadow">
-<!--        --><?//= $row['text'] ?>
-        <?php var_dump($posts); ?>
+        <?= $post['text'] ?>
     </div>
 
 <?php
-//}
+}
 ?>
 
 
