@@ -1,4 +1,4 @@
-<?php include_once('server-info.php');
+<?php
 $request_uri = $_SERVER['REQUEST_URI'];
 $pages = [
     'На главную'  =>  '/',

@@ -1,7 +1,7 @@
 <?php include_once('header.php');
 include_once('db.php');
 
-$stmt = $pdo->query('SELECT * FROM posts');
+$stmt = $pdo->query('SELECT * FROM posts ORDER BY id DESC');
 ?>
 
 <?php
