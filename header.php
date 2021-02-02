@@ -13,9 +13,13 @@ $pages = [
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/ico/favicon-16x16.png">
+    <link rel="manifest" href="resources/ico/site.webmanifest">
     <link rel="stylesheet" href="resources/css/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>INSULT.SPACE - Оскорбляза</title>
+    <title>INSULT.SPACE - Оскорбляза. Оскорбляй красиво</title>
 </head>
 <body class="flex flex-col min-h-screen">
 <div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid relative">
