@@ -9,8 +9,6 @@
                 Версия 0.2.0&nbsp;
                 <a href="https://github.com/morshinin/oskorbleniy_net">GitHub</a>
             </div>
-            <div>
-                <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></div>
         </footer>
         <?php $show_ya_metrica = $_SERVER['REQUEST_URI'] === 'localhost' ? false : true; ?>
         <!-- Yandex.Metrika counter -->
