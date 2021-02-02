@@ -18,8 +18,11 @@ $pages = [
     <title>INSULT.SPACE - Оскорбляза</title>
 </head>
 <body class="flex flex-col min-h-screen">
-<div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid">
-    <h2 class="logo flex align-center"><a href="/">INSULT.SPACE - Оскорбляза</a></h2>
+<div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid relative">
+    <h2 class="logo flex align-center"><a href="/">
+            <img src="resources/img/insult-space-logo.png" alt="Insult space logo" class="absolute top-3">
+            <span class="pl-11">INSULT.SPACE - <em class="text-gray-500">Оскорбляза</em> </span></a>
+    </h2>
     <nav>
         <?php foreach ($pages as $page => $page_url) {
             if ($request_uri !== $page_url) { ?>

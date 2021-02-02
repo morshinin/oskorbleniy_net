@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca3c8a91-5929-4f44-ac35-e2a46a26958d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/myphp1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myphp1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
       <workItem from="1611912574334" duration="611000" />
       <workItem from="1611925625777" duration="8212000" />
       <workItem from="1611964996546" duration="19244000" />
-      <workItem from="1612301287814" duration="3128000" />
+      <workItem from="1612301287814" duration="4754000" />
     </task>
     <servers />
   </component>
@@ -93,10 +90,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="240" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1611943792335" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1612303975452">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1612305327301">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1612303975452" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1612305327301" />
     <state x="305" y="37" width="670" height="763" key="search.everywhere.popup" timestamp="1612303338692">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
