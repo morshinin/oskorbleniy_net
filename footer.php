@@ -6,7 +6,7 @@
                 <a href="mailto:inbox@morshinin.ru">inbox@morshinin.ru</a>
             </div>
             <div>
-                Версия 0.2.0&nbsp;
+                Версия 0.3.0&nbsp;
                 <a href="https://github.com/morshinin/oskorbleniy_net">GitHub</a>
             </div>
         </footer>
