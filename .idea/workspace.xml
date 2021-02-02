@@ -4,14 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca3c8a91-5929-4f44-ac35-e2a46a26958d" name="Default Changelist" comment="" />
+    <list default="true" id="ca3c8a91-5929-4f44-ac35-e2a46a26958d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/myphp1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myphp1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/csanquer/pdo-service-provider" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/silex/silex" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1niAMVLEwJKOcuD257OmkFzyas2" />
   <component name="ProjectViewState">
@@ -36,7 +76,8 @@
       <workItem from="1611862495058" duration="2411000" />
       <workItem from="1611912574334" duration="611000" />
       <workItem from="1611925625777" duration="8212000" />
-      <workItem from="1611964996546" duration="18991000" />
+      <workItem from="1611964996546" duration="19244000" />
+      <workItem from="1612301287814" duration="3128000" />
     </task>
     <servers />
   </component>
@@ -52,14 +93,14 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="240" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1611943792335" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1612122655993">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1612303975452">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1612122655993" />
-    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup" timestamp="1612048508898">
+    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1612303975452" />
+    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup" timestamp="1612303338692">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1612048508898" />
+    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1612303338692" />
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1611862987959" />
   </component>
 </project>
