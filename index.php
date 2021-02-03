@@ -1,26 +1,88 @@
 <?php include_once('header.php');
 include_once('db.php');
 
-$sql = "SELECT * FROM posts ORDER BY id DESC limit :no_of_records_per_page offset :offset";
-$sql_fetch_all = "SELECT * FROM posts";
-$stmt = $pdo->prepare($sql);
-if (isset($_GET['pageno'])) {
-    $pageno = $_GET['pageno'];
-} else {
-    $pageno = 1;
-}
-$no_of_records_per_page = 10;
-$offset = ($pageno-1) * $no_of_records_per_page;
-$stmt->execute(['offset' => $offset, 'no_of_records_per_page' => $no_of_records_per_page]);
-$stmt_all = $pdo->prepare($sql_fetch_all);
-$stmt_all->execute();
-$total_rows = $stmt_all->rowCount();
-$posts = $stmt->fetchAll();
+class Model {
+    /**
+     * @var $sql
+     */
+    public $sql;
 
-$total_pages = ceil($total_rows / $no_of_records_per_page);
+    /**
+     * @var $sql_fetch_all
+     */
+    public $sql_fetch_all;
+
+    /**
+     * @var $stmt
+     */
+    public $stmt;
+
+    /**
+     * @var $stmt_all
+     */
+    public $stmt_all;
+
+    /**
+     * @var $offset
+     */
+    public $offset;
+
+    /**
+     * @var $no_of_records_per_page
+     */
+    public $no_of_records_per_page = 10;
+
+    /**
+     * @var $pageno
+     */
+    public $pageno;
+
+    /**
+     * @var $posts
+     */
+    public $posts;
+
+    public function getLimitedPosts() {
+        $this->sql = "SELECT * FROM posts ORDER BY id DESC limit :no_of_records_per_page offset :offset";
+        $this->stmt = $pdo->prepare($this->sql);
+        $this->stmt->execute(['offset' => $this->offset, 'no_of_records_per_page' => $this->no_of_records_per_page]);
+        $this->posts = $this->stmt->fetchAll();
+        return $this->posts;
+    }
+
+    public function getAllPosts() {
+        $this->sql_fetch_all = "SELECT * FROM posts";
+        $this->stmt_all = $pdo->prepare($this->sql_fetch_all);
+        $this->stmt_all->execute();
+    }
+
+    private function setOffset($pageno) {
+        $this->offset = ($pageno - 1) * $this->no_of_records_per_page;
+        return $this->offset;
+    }
+
+    public function checkPageNumber() {
+        if (isset($_GET['pageno'])) {
+            $this->pageno = $_GET['pageno'];
+        } else {
+            $this->pageno = 1;
+        }
+    }
+
+    public function getTotalRows() {
+        $total_rows = $stmt_all->rowCount();
+        return $total_rows;
+    }
+
+    public function getTotalPages() {
+        $total_pages = ceil($total_rows / $no_of_records_per_page);
+    }
+}
 ?>
 
 <?php
+    $model = new Model;
+    $posts = $model->getLimitedPosts();
     foreach($posts as $post) {
         $text = $post['text'];
 ?>

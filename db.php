@@ -18,24 +18,3 @@ try {
 catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
 }
-//$dbopts = parse_url(getenv('DATABASE_URL'));
-//$app->register(new Csanquer\Silex\PdoServiceProvider\Provider\PDOServiceProvider('pdo'),
-//    array(
-//        'pdo.server' => array(
-//            'driver'   => 'pgsql',
-//            'user' => $dbopts["user"],
-//            'password' => $dbopts["pass"],
-//            'host' => $dbopts["host"],
-//            'port' => $dbopts["port"],
-//            'dbname' => ltrim($dbopts["path"],'/')
-//        )
-//    )
-//);
-//$host = 'localhost';
-//$user = 'postgres';
-//$password = 'Q3mvtobs';
-//$dbname = 'insults';
-//
-//$dsn = 'pgsql:host=' . $host . ';dbname=' . $dbname;
-//
-//$pdo = new PDO($dsn, $user, $password);
