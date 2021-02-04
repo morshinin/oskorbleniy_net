@@ -1,4 +1,4 @@
-<?php include_once('header.php');
+<?php include_once('templates/header.php');
 $host = 'ec2-3-214-4-151.compute-1.amazonaws.com';
 $user = 'pcznwpxkncqmow';
 $password = '62f6fd144dd256197f0545258f28245cadf0d17d54b3d510b181fda5db599317';
@@ -101,5 +101,5 @@ $total_pages = ceil($total_rows / $no_of_records_per_page);
     </div>
 </div>
 
-<?php include_once('footer.php'); ?>
+<?php include_once('templates/footer.php'); ?>
 

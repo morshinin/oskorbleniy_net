@@ -1,6 +1,6 @@
 <?php
 
-include_once ('header.php');
+include_once ('templates/header.php');
 include_once ('db.php');
 
 
@@ -21,4 +21,4 @@ $post = $stmt->fetch();
 
 <?php
 
-include_once ('footer.php');
+include_once ('templates/footer.php');
