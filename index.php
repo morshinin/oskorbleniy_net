@@ -1,10 +1,15 @@
 <?php include_once('header.php');
-
-$host = getenv('HOST');
-$user = getenv('USER');
-$password = getenv('PASSWORD');
-$dbname = getenv('DBNAME');
-$port = getenv('PORT');
+$host = 'ec2-3-214-4-151.compute-1.amazonaws.com';
+$user = 'pcznwpxkncqmow';
+$password = '62f6fd144dd256197f0545258f28245cadf0d17d54b3d510b181fda5db599317';
+$dbname = 'd8vq4946vp4h8p';
+$port = '5432';
+//
+//$host = getenv('HOST');
+//$user = getenv('USER');
+//$password = getenv('PASSWORD');
+//$dbname = getenv('DBNAME');
+//$port = getenv('PORT');
 
 try {
     $dsn = 'pgsql:host='. $host . ';port='. $port
