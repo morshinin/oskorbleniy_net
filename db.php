@@ -1,5 +1,10 @@
 <?php
-include ('config.php');
+
+$host = getenv('HOST');
+$user = getenv('USER');
+$password = getenv('PASSWORD');
+$dbname = getenv('DBNAME');
+$port = getenv('PORT');
 
 try {
     $dsn = 'pgsql:host='. $host . ';port='. $port
