@@ -1,5 +1,24 @@
 <?php include_once('header.php');
-include_once('db.php');
+
+$host = getenv('HOST');
+$user = getenv('USER');
+$password = getenv('PASSWORD');
+$dbname = getenv('DBNAME');
+$port = getenv('PORT');
+
+try {
+    $dsn = 'pgsql:host='. $host . ';port='. $port
+        . ';dbname='. $dbname. ';user='. $user
+        . ';password='. $password;
+
+    $pdo = new PDO($dsn, $user, $password);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+}
 
 $sql = "SELECT * FROM posts ORDER BY id DESC limit :no_of_records_per_page offset :offset";
 $sql_fetch_all = "SELECT * FROM posts";
