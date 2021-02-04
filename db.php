@@ -6,6 +6,7 @@ $password = getenv('PASSWORD');
 $dbname = getenv('DBNAME');
 $port = getenv('PORT');
 
+var_dump($host);
 try {
     $dsn = 'pgsql:host='. $host . ';port='. $port
         . ';dbname='. $dbname. ';user='. $user
