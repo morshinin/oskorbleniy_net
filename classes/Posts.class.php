@@ -14,6 +14,19 @@ class Posts extends Dbh {
         return $stmt->fetchAll();
     }
 
+    /**
+     * Возвращает случаюную запись
+     *
+     * @return mixed
+     */
+    public function getRandomPost()
+    {
+        $sql = 'SELECT text FROM posts ORDER BY random() limit 1';
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
     public function getTotalRows()
     {
         $sql = "SELECT * FROM posts";
