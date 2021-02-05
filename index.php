@@ -63,7 +63,7 @@ $no_of_records_per_page = $data->no_of_records_per_page;
                         <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
                     </svg>
                 </a>
-                <?php for ($i = 1; $i < $pages; $i++) {
+                <?php for ($i = 1; $i < $pages + 1; ++$i) {
                     $is_current_page = $i === $pageno;
                     ?>
                     <a <?php if ($is_current_page) { echo ''; } else { ?> href="?pageno=<?php echo $i; } ?>"

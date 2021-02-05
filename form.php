@@ -1,6 +1,8 @@
-<?php include_once('header.php'); ?>
+<?php
+require_once('templates/header.php');
+?>
 <div class="mt-5 md:mt-0 md:col-span-2">
-    <form action="process.php" method="POST">
+    <form action="./post.process.php" method="POST">
         <div class="shadow sm:rounded-md sm:overflow-hidden">
             <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                 <div>
@@ -23,4 +25,4 @@
         </div>
     </form>
 </div>
-<?php include_once('footer.php'); ?>
+<?php require_once('templates/footer.php'); ?>
