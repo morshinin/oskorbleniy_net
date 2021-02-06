@@ -6,26 +6,24 @@ class Dbh {
     private $password;
     private $dbname;
     private $port;
-    private $path;
-
-//    public function setDbCredentials()
-//    {
-//        $this->host = getenv('HOST');
-//        $this->user = getenv('USER');
-//        $this->password = getenv('PASSWORD');
-//        $this->dbname = getenv('DBNAME');
-//        $this->port = getenv('PORT');
-//    }
 
     public function dbConnection()
     {
-        $parts = (parse_url(getenv('DATABASE_URL')));
-        extract($parts);
-        $this->host = $parts['host'];
-        $this->port = $parts['port'];
-        $this->user = $parts['user'];
-        $this->password = $parts['pass'];
-        $this->dbname = $parts['path'];
+        if (getenv('DATABASE_URL')) {
+            $parts = (parse_url(getenv('DATABASE_URL')));
+            extract($parts);
+            $this->host = $parts['host'];
+            $this->port = $parts['port'];
+            $this->user = $parts['user'];
+            $this->password = $parts['pass'];
+            $this->dbname = str_replace('/', '', $parts['path']);
+        } else {
+            $this->host = getenv('HOST');
+            $this->user = getenv('USER');
+            $this->password = getenv('PASSWORD');
+            $this->dbname = getenv('DBNAME');
+            $this->port = getenv('PORT');
+        }
     }
 
     public function connect()
