@@ -9,9 +9,13 @@ class Dbh {
 
     public function dbConnection()
     {
-        if (getenv('DATABASE_URL')) {
-            $parts = (parse_url(getenv('DATABASE_URL')));
+        $on_heroku = getenv('DATABASE_URL');
+        var_dump($on_heroku);
+        echo 'fuck you';
+        if ($on_heroku) {
+            $parts = (parse_url($on_heroku));
             extract($parts);
+            var_dump($parts);
             $this->host = $parts['host'];
             $this->port = $parts['port'];
             $this->user = $parts['user'];
@@ -23,6 +27,7 @@ class Dbh {
             $this->password = getenv('PASSWORD');
             $this->dbname = getenv('DBNAME');
             $this->port = getenv('PORT');
+            var_dump($this->host);
         }
     }
 
