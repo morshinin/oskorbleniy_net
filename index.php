@@ -8,12 +8,7 @@ $posts = $data->getPaginatedPosts();
 $pages = $data->getPaginationNumbers();
 $pageno = $data->getPage();
 $no_of_records_per_page = $data->no_of_records_per_page;
-//
-//$host = getenv('HOST');
-//$user = getenv('USER');
-//$password = getenv('PASSWORD');
-//$dbname = getenv('DBNAME');
-//$port = getenv('PORT');
+
 
 ?>
 
