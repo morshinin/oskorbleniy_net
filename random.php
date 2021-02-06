@@ -1,13 +1,10 @@
 <?php
 
-include_once ('templates/header.php');
-include_once ('db.php');
+require_once ('templates/header.php');
+include('./includes/class-autoload.inc.php');
 
-
-$sql = 'SELECT text FROM posts ORDER BY random() limit 1';
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$post = $stmt->fetch();
+$data = new Posts();
+$post = $data->getRandomPost();
 ?>
 
 <div class="m-auto text-center p-4 shadow">
@@ -15,10 +12,10 @@ $post = $stmt->fetch();
         <?= $post['text']; ?>
     </p>
     <p>
-        <button onClick="window.location.href=window.location.href" class="block m-auto px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Еще...</button>
+        <button onClick="window.location.href=window.location.href"
+                class="block m-auto px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Еще...</button>
     </p>
 </div>
 
 <?php
-
-include_once ('templates/footer.php');
+require_once ('templates/footer.php');
