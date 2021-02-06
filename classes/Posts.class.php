@@ -14,6 +14,11 @@ class Posts extends Dbh {
         return $stmt->fetchAll();
     }
 
+    public function render()
+    {
+        return "Fuck you";
+    }
+
     /**
      * Возвращает случаюную запись
      *

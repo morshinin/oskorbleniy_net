@@ -2,5 +2,8 @@
     "require": {
         "csanquer/pdo-service-provider": "~1.1dev",
         "ext-pdo": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }
