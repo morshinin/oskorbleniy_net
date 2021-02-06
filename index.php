@@ -1,9 +1,13 @@
-<?php include_once('header.php');
-$host = 'ec2-3-214-4-151.compute-1.amazonaws.com';
-$user = 'pcznwpxkncqmow';
-$password = '62f6fd144dd256197f0545258f28245cadf0d17d54b3d510b181fda5db599317';
-$dbname = 'd8vq4946vp4h8p';
-$port = '5432';
+<?php
+
+include('./includes/class-autoload.inc.php');
+require_once('templates/header.php');
+
+$data = new Posts();
+$posts = $data->getPaginatedPosts();
+$pages = $data->getPaginationNumbers();
+$pageno = $data->getPage();
+$no_of_records_per_page = $data->no_of_records_per_page;
 //
 //$host = getenv('HOST');
 //$user = getenv('USER');
@@ -11,37 +15,6 @@ $port = '5432';
 //$dbname = getenv('DBNAME');
 //$port = getenv('PORT');
 
-try {
-    $dsn = 'pgsql:host='. $host . ';port='. $port
-        . ';dbname='. $dbname. ';user='. $user
-        . ';password='. $password;
-
-    $pdo = new PDO($dsn, $user, $password);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    echo 'Connection failed: ' . $e->getMessage();
-}
-
-$sql = "SELECT * FROM posts ORDER BY id DESC limit :no_of_records_per_page offset :offset";
-$sql_fetch_all = "SELECT * FROM posts";
-$stmt = $pdo->prepare($sql);
-if (isset($_GET['pageno'])) {
-    $pageno = $_GET['pageno'];
-} else {
-    $pageno = 1;
-}
-$no_of_records_per_page = 10;
-$offset = ($pageno-1) * $no_of_records_per_page;
-$stmt->execute(['offset' => $offset, 'no_of_records_per_page' => $no_of_records_per_page]);
-$stmt_all = $pdo->prepare($sql_fetch_all);
-$stmt_all->execute();
-$total_rows = $stmt_all->rowCount();
-$posts = $stmt->fetchAll();
-
-$total_pages = ceil($total_rows / $no_of_records_per_page);
 ?>
 
 <?php
@@ -77,19 +50,30 @@ $total_pages = ceil($total_rows / $no_of_records_per_page);
         </div>
         <div>
             <nav class="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
-                <a <?php if($pageno <= 1){echo ''; } else {?>href="<?php echo '?pageno='.($pageno - 1); } ?>" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+            <?php
+                $previous_page = $pageno <= 1;
+                $next_page = $pageno >= $pages;
+                ?>
+                <a <?php if($previous_page){echo ''; } else { ?>href="<?php echo '?pageno='.($pageno - 1); } ?>"
+                class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300
+                <?php if ($previous_page) { echo 'bg-gray-200 hover:bg-gray-200'; } else { echo 'bg-white hover:bg-gray-50'; } ?> text-sm font-medium text-gray-500">
                     <span class="sr-only">Предыдущая</span>
                     <!-- Heroicon name: chevron-left -->
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
                     </svg>
                 </a>
-                <?php for ($x = 0; $x < $total_pages; $x++) { ?>
-                    <a href="?pageno=<?= $x + 1 ?>" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                        <?= $x + 1 ?>
-                    </a>
+                <?php for ($i = 1; $i < $pages + 1; ++$i) {
+                    $is_current_page = $i === $pageno;
+                    ?>
+                    <a <?php if ($is_current_page) { echo ''; } else { ?> href="?pageno=<?php echo $i; } ?>"
+                       class="relative inline-flex items-center px-4 py-2 border border-gray-300
+                       <?php if ($is_current_page) { echo 'bg-gray-200 hover:bg-gray-200'; } else { echo 'bg-white hover:bg-gray-50'; }?>
+                       text-sm font-medium text-gray-700"><?= $i ?></a>
                 <?php } ?>
-                <a <?php if($pageno >= $total_pages){ echo ''; } else { ?> href="<?php echo '?pageno='.($pageno + 1); } ?>" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                <a <?php if($pageno >= $pages){ echo ''; } else { ?> href="<?php echo '?pageno='.($pageno + 1); } ?>"
+                 class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300
+                 <?php if ($next_page) { echo 'bg-gray-200 hover:bg-gray-200'; } else { echo 'bg-white hover:bg-gray-50'; } ?> text-sm font-medium text-gray-500">
                     <span class="sr-only">Следующая</span>
                     <!-- Heroicon name: chevron-right -->
                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -101,5 +85,5 @@ $total_pages = ceil($total_rows / $no_of_records_per_page);
     </div>
 </div>
 
-<?php include_once('footer.php'); ?>
+<?php include_once('templates/footer.php'); ?>
 

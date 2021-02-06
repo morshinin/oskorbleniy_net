@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3c8a91-5929-4f44-ac35-e2a46a26958d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config_template.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Posts.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Posts.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/random.php" beforeDir="false" afterPath="$PROJECT_DIR$/random.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,14 +94,14 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="364" y="200" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1612451020268" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1612455590171">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1612569305522">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1612455590171" />
-    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup" timestamp="1612451018480">
+    <state width="500" height="445" key="SwitcherDM/0.0.1280.800@0.0.1280.800" timestamp="1612569305522" />
+    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup" timestamp="1612539612112">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1612451018480" />
+    <state x="305" y="37" width="670" height="763" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1612539612112" />
     <state x="305" y="56" width="670" height="676" key="search.everywhere.popup/0.23.1280.709@0.23.1280.709" timestamp="1611862987959" />
   </component>
 </project>
