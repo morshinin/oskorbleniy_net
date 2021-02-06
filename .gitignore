@@ -2,3 +2,4 @@
 vendor
 .idea/workspace.xml
 .env
+config.php
