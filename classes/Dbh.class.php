@@ -1,12 +1,39 @@
 <?php
 
+/**
+ * Class Dbh
+ */
 class Dbh {
+    /**
+     * @var $host
+     */
     public $host;
+
+    /**
+     * @var $user
+     */
     public $user;
+
+    /**
+     * @var $password
+     */
     public $password;
+
+    /**
+     * @var $dbname
+     */
     public $dbname;
+
+    /**
+     * @var $port
+     */
     public $port;
 
+    /**
+     * Connection to the database
+     * checks if there is a heroku enviroment variable or local
+     * to use local variable you need to export it to your local .zshrc
+     */
     public function dbConnection()
     {
         $on_heroku = getenv('DATABASE_URL');
@@ -29,6 +56,11 @@ class Dbh {
         }
     }
 
+    /**
+     * Database connection via pdo
+     *
+     * @return pdo
+     */
     public function connect()
     {
         $this->dbConnection();

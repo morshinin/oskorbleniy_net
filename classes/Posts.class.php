@@ -1,8 +1,20 @@
 <?php
 
-class Posts extends Dbh {
+/**
+ * Class Posts
+ */
+class Posts extends Dbh
+{
+    /**
+     * @var int $no_of_records_per_page
+     */
     public $no_of_records_per_page = 10;
 
+    /**
+     * Returns paginated posts
+     *
+     * @return array
+     */
     public function getPaginatedPosts()
     {
         $no_of_records_per_page = $this->no_of_records_per_page;
@@ -15,7 +27,7 @@ class Posts extends Dbh {
     }
 
     /**
-     * Возвращает случаюную запись
+     * Returns random post
      *
      * @return mixed
      */
@@ -27,6 +39,11 @@ class Posts extends Dbh {
         return $stmt->fetch();
     }
 
+    /**
+     * Counts all the posts from the database
+     *
+     * @return int
+     */
     public function getTotalRows()
     {
         $sql = "SELECT * FROM posts";
@@ -41,7 +58,7 @@ class Posts extends Dbh {
     }
 
     /**
-     * Возвращает количество страниц для пагинации
+     * Returns page numbers
      *
      * @return false|float
      */
@@ -52,9 +69,9 @@ class Posts extends Dbh {
     }
 
     /**
-     * Добавление записи в базу
+     * Inserts text from request to the database
      *
-     * @param $text - текст оскорбления передается из формы
+     * @param $text - text from form request
      */
     public function addPost($text)
     {
