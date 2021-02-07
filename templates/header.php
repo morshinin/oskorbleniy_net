@@ -19,13 +19,17 @@ $pages = [
     <link rel="manifest" href="resources/ico/site.webmanifest">
     <link rel="stylesheet" href="resources/css/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>INSULT.SPACE - Оскорбляза. Оскорбляй красиво</title>
+    <title>INSULT.SPACE - Оскорбляй красиво</title>
 </head>
 <body class="flex flex-col min-h-screen">
 <div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid relative">
-    <h2 class="logo flex align-center"><a href="/">
-            <img src="resources/img/insult-space-logo.png" alt="Insult space logo" class="absolute top-3">
-            <span class="pl-11">INSULT.SPACE - <em class="text-gray-500">Оскорбляза</em> </span></a>
+    <h2 class="logo flex align-center">
+        <a href="/" class="grid grid-rows-2">
+            <img src="resources/img/insult-space-logo.png" alt="Insult space logo"
+                 class="row-span-2 pr-2 pt-1">
+            <span>INSULT.SPACE</span>
+            <span class="text-xs text-gray-500">Оскорбляй красиво</span>
+        </a>
     </h2>
     <nav>
         <?php foreach ($pages as $page => $page_url) {
@@ -43,7 +47,7 @@ $pages = [
     </nav>
 </div>
 <div class="absolute h-full">
-    <div class="sticky top-16 p-2 text-xs text-gray-500 grid grid-cols-3 grid-rows-2">
+    <div class="sticky bg-gray-50 border-t border-gray-100 top-24 p-2 text-xs text-gray-500 grid grid-cols-3 grid-rows-2">
         <h2 class="col-span-3 row-span-1 pb-2">Поделиться ссылкой на сайт</h2>
         <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//insult.space/" target="_blank">
             <svg viewBox="-110 1 511 511.99996" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current">
