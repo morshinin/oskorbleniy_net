@@ -5,7 +5,7 @@ $pages = [
     'Списком'  =>  '/',
     'Случайное' =>  '/random.php'
 ];
-$is_random_post_page = $request_uri === $pages['Случайное'] ? 'h-screen' : '';
+$is_random_post_page = ($request_uri === $pages['Случайное']) || ($request_uri === '/form.php') ? 'h-screen' : '';
 ?>
 <!doctype html>
 <html lang="ru">
