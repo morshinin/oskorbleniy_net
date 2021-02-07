@@ -7,6 +7,7 @@ $data = new Posts();
 $posts = $data->getPaginatedPosts();
 $pages = $data->getPaginationNumbers();
 $pageno = $data->getPage();
+$total_posts = $data->getTotalRows();
 $no_of_records_per_page = $data->no_of_records_per_page;
 
 
@@ -39,8 +40,7 @@ $no_of_records_per_page = $data->no_of_records_per_page;
     <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
         <div>
             <p class="text-sm text-gray-700">
-                <span class="font-medium"><?= $no_of_records_per_page ?></span>
-                оскорблений на странице
+                <span class="font-medium"><?= $no_of_records_per_page ?> из <?= $total_posts ?></span>
             </p>
         </div>
         <div>
