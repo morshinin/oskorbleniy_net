@@ -8,10 +8,10 @@ $post = $data->getRandomPost();
 $text = $post['text'];
 ?>
 
-<div class="card--random m-auto text-center p-4 shadow relative">
-    <p class="text-3xl mb-3">
+<article class="card--random m-auto text-center p-4 shadow relative">
+    <h1 class="text-3xl mb-3">
         <?= $text ?>
-    </p>
+    </h1>
     <div class="card__social absolute justify-center w-full right-0 px-2 flex">
         <a href="whatsapp://send?text=<?= $text ?>" data-action="share/whatsapp/share" title="Оскорбить сообщением в Whatsapp"
            target="_blank" class="pr-3">
@@ -28,7 +28,7 @@ $text = $post['text'];
         <button onClick="window.location.href=window.location.href"
                 class="block m-auto px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Еще...</button>
     </p>
-</div>
+</article>
 
 <?php
 require_once ('templates/footer.php');
