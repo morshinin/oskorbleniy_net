@@ -47,7 +47,7 @@ $pages = [
     </nav>
 </div>
 <div class="absolute h-full">
-    <div class="sticky border-t border-gray-100 top-24 p-2 text-xs text-gray-500 grid grid-cols-3 grid-rows-2">
+    <div class="sticky bg-gray-50 border-t border-gray-100 top-24 p-2 text-xs text-gray-500 grid grid-cols-3 grid-rows-2">
         <h2 class="col-span-3 row-span-1 pb-2">Поделиться ссылкой на сайт</h2>
         <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//insult.space/" target="_blank">
             <svg viewBox="-110 1 511 511.99996" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current">
