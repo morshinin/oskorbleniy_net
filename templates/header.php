@@ -5,6 +5,7 @@ $pages = [
     'Списком'  =>  '/',
     'Случайное' =>  '/random.php'
 ];
+$is_random_post_page = $request_uri === $pages['Случайное'] ? 'h-screen' : '';
 ?>
 <!doctype html>
 <html lang="ru">
@@ -21,7 +22,7 @@ $pages = [
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>INSULT.SPACE - Оскорбляй красиво</title>
 </head>
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen <?= $is_random_post_page ?>">
 <div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid relative">
     <h2 class="logo flex align-center">
         <a href="/" class="grid grid-rows-2">
