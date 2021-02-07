@@ -10,12 +10,8 @@ $pageno = $data->getPage();
 $total_posts = $data->getTotalRows();
 $no_of_records_per_page = $data->no_of_records_per_page;
 
-
-?>
-
-<?php
-    foreach($posts as $post) {
-        $text = $post['text'];
+foreach($posts as $post) {
+    $text = $post['text'];
 ?>
 
     <div class="card p-4 pb-9 my-4 shadow relative hover:bg-gray-50">

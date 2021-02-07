@@ -2,6 +2,10 @@
     align-items: center;
 }
 
+.logo > a {
+    grid-template-columns: fit-content(50px) 1fr;
+}
+
 .card:not(:first-child):hover .card__social a {
     display: block;
 }
