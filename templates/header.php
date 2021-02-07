@@ -34,7 +34,7 @@ $is_random_post_page = $request_uri === $pages['Случайное'] ? 'h-screen
     </h2>
     <nav>
         <?php foreach ($pages as $page => $page_url) {
-            $is_current_page = $request_uri === $page_url;
+            $is_current_page = preg_replace('/\?.*/','', $request_uri) === $page_url;
             $show_bg = $is_current_page ? 'bg-gray-200 hover:bg-gray-200 cursor-default' : '';
             $show_link = $is_current_page ? '#0' : $page_url;
             ?>
