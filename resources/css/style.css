@@ -2,22 +2,14 @@
     align-items: center;
 }
 
-.card:hover {
-    background: #ecf0f1;
-}
-
-.card:hover .card__social a {
+.card:not(:first-child):hover .card__social a {
     display: block;
 }
 
-.card__social a {
+.card:not(:first-child) .card__social a {
     display: none;
 }
 
 .card--random a {
     display: block;
-}
-
-.card__social a:not(:last-child) {
-    padding-right: 5px;
 }
