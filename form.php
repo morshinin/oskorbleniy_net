@@ -1,7 +1,7 @@
 <?php
 require_once('templates/header.php');
 ?>
-<div class="mt-5 md:mt-0 md:col-span-2">
+<div class="md:col-span-2 m-auto">
     <form action="./post.process.php" method="POST">
         <div class="shadow sm:rounded-md sm:overflow-hidden">
             <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
