@@ -2,11 +2,11 @@
     align-items: center;
 }
 
-.card:hover .card__social a {
+.card:not(:first-child):hover .card__social a {
     display: block;
 }
 
-.card__social a {
+.card:not(:first-child) .card__social a {
     display: none;
 }
 
