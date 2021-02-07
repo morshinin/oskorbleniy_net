@@ -23,7 +23,7 @@ $is_random_post_page = $request_uri === $pages['Случайное'] ? 'h-screen
     <title>INSULT.SPACE - Оскорбляй красиво</title>
 </head>
 <body class="flex flex-col min-h-screen <?= $is_random_post_page ?>">
-<div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid relative">
+<div class="flex justify-between align-center p-3 border-b border-gray-100 border-solid relative z-10">
     <h2 class="logo flex align-center">
         <a href="/" class="grid grid-rows-2">
             <img src="resources/img/insult-space-logo.png" alt="Insult space logo"
