@@ -29,9 +29,12 @@ $pages = [
     </h2>
     <nav>
         <?php foreach ($pages as $page => $page_url) {
-            if ($request_uri !== $page_url) { ?>
-        <a href="<?= $page_url ?>" class="mr-5"><?= $page ?></a>
-        <?php } } ?>
+            $is_current_page = $request_uri === $page_url;
+            $show_bg = $is_current_page ? 'bg-gray-200 hover:bg-gray-200 cursor-default' : '';
+            $show_link = $is_current_page ? '#0' : $page_url;
+            ?>
+        <a href="<?= $show_link ?>" class="mr-5 hover:bg-gray-50 inline-block p-2 <?= $show_bg ?>"><?= $page ?></a>
+        <?php } ?>
         <?php if ($request_uri !== '/form.php') { ?>
             <a href="/form.php" class="inline-flex justify-center py-2 px-4 border border-transparent
             shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700
