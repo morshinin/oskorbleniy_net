@@ -49,7 +49,10 @@ $page_description = $page_seo_data->setPageDescription();
         <?php if ($request_uri !== '/form.php') { ?>
             <a href="/form.php" class="inline-flex justify-center py-2 px-4 border border-transparent
             shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700
-            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Добавить оскорбление</a>
+            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            rel="nofollow">
+                Добавить оскорбление
+            </a>
         <?php } ?>
     </nav>
 </header>
