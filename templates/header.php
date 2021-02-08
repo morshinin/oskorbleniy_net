@@ -1,11 +1,16 @@
 <?php
+
+include('./includes/class-autoload.inc.php');
+$page_seo_data = new Seo();
 $request_uri = $_SERVER['REQUEST_URI'];
 $pages = [
     'О сайте' => '/about.php',
     'Списком'  =>  '/',
     'Случайное' =>  '/random.php'
 ];
-$is_random_post_page = ($request_uri === $pages['Случайное']) || ($request_uri === '/form.php') ? 'h-screen' : '';
+$centered_layout_class = ($request_uri === $pages['Случайное']) || ($request_uri === '/form.php') ? 'h-screen' : '';
+$page_title = $page_seo_data->setPageTitle();
+$page_description = $page_seo_data->setPageDescription();
 ?>
 <!doctype html>
 <html lang="ru">
@@ -14,15 +19,16 @@ $is_random_post_page = ($request_uri === $pages['Случайное']) || ($requ
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="<?= $page_description ?>">
     <link rel="apple-touch-icon" sizes="180x180" href="resources/ico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="resources/ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="resources/ico/favicon-16x16.png">
     <link rel="manifest" href="resources/ico/site.webmanifest">
     <link rel="stylesheet" href="resources/css/style.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <title>INSULT.SPACE - Оскорбляй красиво</title>
+    <title><?= $page_title ?> - INSULT.SPACE</title>
 </head>
-<body class="flex flex-col min-h-screen <?= $is_random_post_page ?>">
+<body class="flex flex-col min-h-screen <?= $centered_layout_class ?>">
 <header class="flex justify-between align-center p-3 border-b border-gray-100 border-solid relative z-10">
     <h2 class="logo flex align-center">
         <a href="/" class="grid grid-rows-2">

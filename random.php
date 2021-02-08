@@ -1,7 +1,6 @@
 <?php
 
 require_once ('templates/header.php');
-include('./includes/class-autoload.inc.php');
 
 $data = new Posts();
 $post = $data->getRandomPost();
