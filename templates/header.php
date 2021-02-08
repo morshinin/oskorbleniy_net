@@ -83,4 +83,14 @@ $page_description = $page_seo_data->setPageDescription();
         </a>
     </div>
 </aside>
+
+<aside class="absolute right-0 h-full">
+    <div class="sticky p-4 top-24">
+        <a href="https://ko-fi.com/insultspace" target="_blank" class="flex align-baseline">
+            <img src="/resources/img/cup.webp" alt="Иконка чашки кофе" title="Купить мне кофе"
+                 class="h-4 pr-2 flex-shrink-0">
+            <span class="text-xs text-gray-500">Купить мне кофе</span>
+        </a>
+    </div>
+</aside>
 <main class="conatiner mx-auto max-w-2xl mt-4 h-full flex flex-col">
