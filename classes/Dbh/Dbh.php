@@ -1,5 +1,9 @@
 <?php
 
+namespace Insult\Dbh;
+
+use PDO;
+
 /**
  * Class Dbh
  */

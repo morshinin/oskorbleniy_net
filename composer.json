@@ -2,5 +2,10 @@
     "require": {
         "csanquer/pdo-service-provider": "~1.1dev",
         "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Insult\\": "classes/"
+        }
     }
 }

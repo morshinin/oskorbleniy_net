@@ -1,7 +1,13 @@
 <?php
 
-include('./includes/class-autoload.inc.php');
-$page_seo_data = new Seo();
+use Insult\Seo\Seo;
+require_once ('vendor/autoload.php');
+
+if (class_exists(Seo::class)) {
+    $page_seo_data = new Seo();
+    $page_title = $page_seo_data->setPageTitle();
+    $page_description = $page_seo_data->setPageDescription();
+}
 $request_uri = $_SERVER['REQUEST_URI'];
 $pages = [
     'О сайте' => '/about.php',
@@ -9,8 +15,6 @@ $pages = [
     'Случайное' =>  '/random.php'
 ];
 $centered_layout_class = ($request_uri === $pages['Случайное']) || ($request_uri === '/form.php') ? 'h-screen' : '';
-$page_title = $page_seo_data->setPageTitle();
-$page_description = $page_seo_data->setPageDescription();
 ?>
 <!doctype html>
 <html lang="ru">

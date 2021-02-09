@@ -1,5 +1,7 @@
 <?php
 
+namespace Insult\Seo;
+
 /**
  * All about SEO
  *
