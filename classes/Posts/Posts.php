@@ -1,5 +1,9 @@
 <?php
 
+namespace Insult\Posts;
+
+use Insult\Dbh\Dbh;
+
 /**
  * Class Posts
  */

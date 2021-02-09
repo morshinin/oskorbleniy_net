@@ -1,6 +1,6 @@
 <?php
 
-include('./includes/class-autoload.inc.php');
+use Insult\Posts\Posts;
 
 $posts = new Posts();
 

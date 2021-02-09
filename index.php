@@ -1,5 +1,8 @@
 <?php
 
+use Insult\Posts\Posts;
+
+require_once realpath("vendor/autoload.php");
 require_once('templates/header.php');
 
 $data = new Posts();
